@@ -4,7 +4,7 @@ services:
   db:
     image: mongo:5.0.7
     container_name: mongodb
-    #restart: always
+    restart: always
     networks:
       - backend
     expose:
