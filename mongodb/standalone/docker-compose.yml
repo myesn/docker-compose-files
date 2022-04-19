@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  db:
+    image: mongo:5.0.7
+    container_name: mongodb
+    #restart: always
+    networks:
+      - backend
+    expose:
+      - "27017"
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${root_username}
+      - MONGO_INITDB_ROOT_PASSWORD=${root_password}
+    command: --config /etc/mongod.conf
+    volumes:
+      - ./mongodb/.home/mongodb:/home/mongodb
+      - ./mongodb/data:/data/db
+      - ./mongodb/config/mongod.conf:/etc/mongod.conf
+      - ./mongodb/log:/var/log/mongodb
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
