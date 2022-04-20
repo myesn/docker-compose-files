@@ -14,6 +14,8 @@
 - [ ] Nginx
 - [ ] MySQL
 - Redis
+    - [ ] Standalone 单实例
     - [ ] Sentinel 哨兵模式
 - RabbitMQ
+    - [ ] Standalone 单实例
     - [ ] Classic Queue Mirroring 经典镜像队列（镜像集群）
