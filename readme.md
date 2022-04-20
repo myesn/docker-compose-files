@@ -12,7 +12,9 @@
 - [ ] Node.js
 - [ ] Java
 - [ ] Nginx
-- [ ] MySQL
+- MySQL
+    - [ ] Standalone 单实例
+    - [ ] Master=Slave 双实例互为主从
 - Redis
     - [ ] Standalone 单实例
     - [ ] Sentinel 哨兵模式
