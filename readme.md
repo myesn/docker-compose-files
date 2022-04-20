@@ -19,5 +19,5 @@
     - [ ] Standalone 单实例
     - [ ] Sentinel 哨兵模式
 - RabbitMQ
-    - [ ] Standalone 单实例
+    - [x] [Standalone 单实例](rabbitmq/standalone/readme.md)
     - [ ] Classic Queue Mirroring 经典镜像队列（镜像集群）
