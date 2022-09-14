@@ -23,3 +23,5 @@
     - [ ] Classic Queue Mirroring 经典镜像队列（镜像集群）
 - PostgreSQL
     - [x] [Standalone 单实例](postgre-sql/standalone/readme.md)
+- Caddy
+  - [x] [Reverse proxy 反向代理](caddy/reverse-proxy/readme.md)
