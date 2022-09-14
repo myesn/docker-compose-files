@@ -9,9 +9,9 @@
 - MongoDB
     - [x] [Standalone 单实例](mongodb/standalone/readme.md)
     - [ ] Replica Set 副本集
-- [ ] Node.js
-- [ ] Java
-- [ ] Nginx
+- Node.js
+- Java
+- Nginx
 - MySQL
     - [ ] Standalone 单实例
     - [ ] Master=Slave 双实例互为主从
