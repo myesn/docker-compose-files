@@ -28,7 +28,7 @@ reverse_proxy localhost:3001
 
 ### 上传部署包
 
-将部署包（`caddy`）上传到服务器中任意目录。
+将部署包（`caddy\reverse_proxy`）上传到服务器中任意目录。
 
 ### 启动服务
 
