@@ -21,3 +21,5 @@
 - RabbitMQ
     - [x] [Standalone 单实例](rabbitmq/standalone/readme.md)
     - [ ] Classic Queue Mirroring 经典镜像队列（镜像集群）
+- PostgreSQL
+    - [x] [Standalone 单实例](postgre-sql/standalone/readme.md)
