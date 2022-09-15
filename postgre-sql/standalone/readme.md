@@ -38,3 +38,19 @@ sudo chown -R 999:999 postgres-data
 ```bash
 docker-compose up -d
 ```
+
+# 其他
+
+## 其他服务依赖此服务
+
+当 `app` 服务依赖于 `postgres` 服务时可以这样写：
+
+```yaml
+services:
+  app:
+    depends_on:
+      postgres:
+        condition: service_healthy
+```
+
+如果不依赖，可以将 `postgres` 服务中的 `healthcheck` 配置删除。
