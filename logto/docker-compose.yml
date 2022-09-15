@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  app:
+    depends_on:
+      postgres:
+        condition: service_healthy
+    image: ghcr.io/logto-io/logto:prerelease
+    ports:
+      - "443:443"
+    environment: # https://docs.logto.io/zh-cn/docs/references/core/configuration/#%E9%80%9A%E7%94%A8
+      - ALL_YES=1
+      - NO_INQUIRY=0
+      - TRUST_PROXY_HEADER=1
+      - DB_URL_DEFAULT=postgres://postgres:P@ssw0rd@postgres:5432 # https://www.postgresql.org/docs/14/libpq-connect.html#id-1.7.3.8.3.6
+      - ENDPOINT=https://myesn.io
+      - PORT=443
+      - HTTPS_CERT_PATH=/https/cert/myesn.io.pem
+      - HTTPS_KEY_PATH=/https/cert/myesn.io-key.pem
+    volumes:
+      - ./https/cert:/https/cert
+
+  postgres: # https://github.com/docker-library/docs/blob/master/postgres/README.md#environment-variables
+    image: postgres:14.5
+    user: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=P@ssw0rd
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 2
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
