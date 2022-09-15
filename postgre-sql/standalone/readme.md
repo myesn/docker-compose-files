@@ -4,6 +4,17 @@
 
 ## 步骤
 
+### 删除 .gitkeep
+
+删除 `postgres-data\.gitkeep` 文件，保留目录。
+
+### 设置文件夹权限
+
+使用以下命令设置 `postgres-data` 目录的权限：
+```bash
+sudo chown -R 999:999 postgres-data
+```
+
 ### 设置账号密码
 
 打开 `docker-compose.yml` 文件，找到如下配置，将 `POSTGRES_USER: postgres`、`POSTGRES_PASSWORD: p0stgr3s` 替换为自己想要的。

@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   postgres:
-    image: postgres:14
-    environment:
+    image: postgres:14.5
+    environment: # https://github.com/docker-library/docs/blob/master/postgres/README.md#environment-variables
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
