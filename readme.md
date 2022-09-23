@@ -26,4 +26,4 @@
 - Caddy
   - [x] [Reverse proxy 反向代理](caddy/reverse-proxy/readme.md)
 - Logto
-  - [x] [最小改动运行](logto/readme.md)
+  - [x] [Logto(HTTPS)+PostgresSQL](logto/simple/readme.md)

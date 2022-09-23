@@ -1,6 +1,6 @@
 # Logto
 
-本页介绍了如何部署 `Logto` 实例。
+本页介绍了如何部署 `Logto` 简单实例。
 
 ## 步骤
 
@@ -36,9 +36,16 @@
       - ENDPOINT=https://myesn.io
 ```
 
+再使用 [SwitchHosts](https://github.com/oldj/SwitchHosts) 软件修改本机的 hosts 文件，绑定域名和ip，例如：
+```
+// C:\Windows\system32\drivers\etc\hosts
+192.168.123.50 myesn.io
+```
+
+
 ### 上传部署包
 
-将部署包（`logto`）上传到服务器中任意目录。
+将部署包（`logto\simple`）上传到服务器中任意目录。
 
 ### 权限配置
 

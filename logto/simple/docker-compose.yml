@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  app:
+  logto:
     depends_on:
       postgres:
         condition: service_healthy
