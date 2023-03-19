@@ -12,6 +12,7 @@
 - Node.js
 - Java
 - Nginx
+  - [x] [SSL配置](nginx/ssl-as-a-reverse-proxy/readme.md)
 - MySQL
     - [ ] Standalone 单实例
     - [ ] Master=Slave 双实例互为主从
