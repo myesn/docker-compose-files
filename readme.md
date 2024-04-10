@@ -7,24 +7,30 @@
 ## 目录
 
 - MongoDB
-    - [x] [Standalone 单实例](mongodb/standalone/readme.md)
-    - [ ] Replica Set 副本集
+    - [x] [MongoDB Standalone](mongodb/standalone/readme.md)
+    - [ ] MongoDB Replica Set 副本集
 - Node.js
 - Java
 - Nginx
-  - [x] [SSL配置](nginx/ssl-as-a-reverse-proxy/readme.md)
+  - [x] [Nginx SSL配置](nginx/ssl-as-a-reverse-proxy/readme.md)
 - MySQL
-    - [ ] Standalone 单实例
-    - [ ] Master=Slave 双实例互为主从
+    - Standalone
+      - [x] [MySQL 5.7.44 Standalone](mysql/standalone/5.7.44/readme.md)
+      - [ ] [MySQL 8 Standalone]
+    - [ ] MySQL Master=Slave 双实例互为主从
 - Redis
-    - [ ] Standalone 单实例
-    - [ ] Sentinel 哨兵模式
+    - [ ] Redis Standalone
+    - [ ] Redis Sentinel 哨兵模式
 - RabbitMQ
-    - [x] [Standalone 单实例](rabbitmq/standalone/readme.md)
-    - [ ] Classic Queue Mirroring 经典镜像队列（镜像集群）
+    - [x] [RabbitMQ Standalone](rabbitmq/standalone/readme.md)
+    - [ ] RabbitMQ Classic Queue Mirroring 经典镜像队列（镜像集群）
 - PostgreSQL
-    - [x] [Standalone 单实例](postgre-sql/standalone/readme.md)
+    - [x] [PostgreSQL Standalone](postgre-sql/standalone/readme.md)
 - Caddy
-  - [x] [Reverse proxy 反向代理](caddy/reverse-proxy/readme.md)
+  - [x] [Caddy Reverse proxy 反向代理](caddy/reverse-proxy/readme.md)
 - Logto
-  - [x] [Logto(HTTPS)+PostgresSQL](logto/simple/readme.md)
+  - [x] [Logto(HTTPS) + PostgresSQL](logto/simple/readme.md)
+
+## 单词说明
+
+`Standalone`：单实例
