@@ -16,7 +16,6 @@ services:
       - MYSQL_DATABASE=${database}           # [optional] 容器启动时创建的数据库的名称。如果提供了 MYSQL_USER、MYSQL_PASSWORD，则 MYSQL_USER 将被授予对此数据库的超级用户访问权限
       - MYSQL_USER=${user}                   # [optional] 创建新用户，此用户将被授予变量 MYSQL_DATABASE 数据库的超级用户权限
       - MYSQL_PASSWORD=${user_password}      # [optional] 创建新用户的密码
-    command: --config /etc/mongod.conf
     volumes:
       - ./mysql:/var/lib/mysql
       # 首次启动容器时，将根据变量 MYSQL_DATABASE 创建一个数据库，创建完毕后，可以将一些数据库初始化脚本放到该目录中执行
