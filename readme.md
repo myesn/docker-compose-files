@@ -16,7 +16,7 @@
 - MySQL
     - Standalone
       - [x] [MySQL 5.7.44 Standalone](mysql/standalone/5.7.44/readme.md)
-      - [ ] [MySQL 8 Standalone]
+      - [ ] MySQL 8 Standalone
     - [ ] MySQL Master=Slave 双实例互为主从
 - Redis
     - [ ] Redis Standalone
