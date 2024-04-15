@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:8.0.28
+    container_name: mysql
+    restart: always
+    networks:
+      - backend
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${root_password} # [required] root 超级用户账户的密码
+      - MYSQL_DATABASE=${database}           # [optional] 容器启动时创建的数据库的名称。如果提供了 MYSQL_USER、MYSQL_PASSWORD，则 MYSQL_USER 将被授予对此数据库的超级用户访问权限
+      - MYSQL_USER=${user}                   # [optional] 创建新用户，此用户将被授予变量 MYSQL_DATABASE 数据库的超级用户权限
+      - MYSQL_PASSWORD=${user_password}      # [optional] 创建新用户的密码
+    volumes:
+      - ./mysql:/var/lib/mysql
+      # 首次启动容器时，将根据变量 MYSQL_DATABASE 创建一个数据库，创建完毕后，可以将一些数据库初始化脚本放到该目录中执行
+      # 支持的文件类型有 .sh, .sql, .sql.gz 三种。文件将按字母顺序执行
+      # SQL 文件将默认导入 MYSQL_DATABASE 变量指定的数据库
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  # 一个 MySQL 网页 GUI
+  adminer:
+    image: adminer
+    restart: always
+    networks:
+      - backend
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+
+
+networks:
+  backend:
+    name: backend
+    driver: bridge
